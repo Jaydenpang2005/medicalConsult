@@ -12,6 +12,12 @@ import {
 
 const ConsultDoctorBlock = () => {
 
+    const onlineConsultHandler = () => {
+
+        console.log('onlineConsultHandler');
+    
+    }
+
     return (
         <View style={{height:'22%', width: '100%', flexDirection: 'row'}}>
 
@@ -22,7 +28,8 @@ const ConsultDoctorBlock = () => {
                 <Text>副主任医生</Text>
 
                 <Text>线上咨询：100 | 线下预约挂号：30</Text>
-                <TouchableOpacity style={{backgroundColor:'green', borderRadius:10, padding:10, width:100, alignItems:'center'}}>
+                <TouchableOpacity style={{backgroundColor:'green', borderRadius:10, padding:10, width:100, alignItems:'center'}}
+                onPress={onlineConsultHandler}>
                     <Text>线上咨询</Text>
                 </TouchableOpacity>
 

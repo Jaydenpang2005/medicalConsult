@@ -1,15 +1,30 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
 import ConsultDoctorBlock from '@/components/consultDoctorBlock';
+import OnlineConsult from '@/components/OnlineConsult';
 import { StyleSheet, Image, Platform, SafeAreaView, ScrollView, StatusBar } from 'react-native';
+import React from 'react';
+import FakePage from '@/components/fakePage';
 
 
 
 export default function TabTwoScreen() {
+
+    const [currentPage, setCurrentPage] = React.useState(ConsultDoctorBlock);
+
+    const switchPage = (page: React.JSX.Element) =>{
+
+        setCurrentPage(page)
+
+    }
+
+
+
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView style={styles.scrollView}>
-        <ConsultDoctorBlock />
-      </ScrollView>
+      {/* <ScrollView style={styles.scrollView}>
+        {currentPage}
+      </ScrollView> */}
+      <FakePage />
     </SafeAreaView>
   );
 }
@@ -18,6 +33,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         paddingTop: StatusBar.currentHeight,
+         backgroundColor:'white'
       },
       scrollView: {
         marginHorizontal: 10,

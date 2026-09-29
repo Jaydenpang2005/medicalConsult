@@ -4,6 +4,7 @@ import React from 'react';
 import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
+import { Image } from 'react-native';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -28,7 +29,7 @@ export default function TabLayout() {
         options={{
           title: '咨询挂号',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
+            <Image source={require('../../assets/images/exploreIcon.png')} style={{width: 24, height: 24, tintColor: color, resizeMode: 'contain'}}/>
           ),
         }}
       />
@@ -38,7 +39,7 @@ export default function TabLayout() {
             options={{
             title: '我的',
             tabBarIcon: ({ color, focused }) => (
-                <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
+                <Image source={require('../../assets/images/userIcon.png')} style={{width: 24, height: 24, tintColor: color, resizeMode: 'contain'}}/>
             ),
             }}
         />

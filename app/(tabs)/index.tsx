@@ -1,3 +1,4 @@
+import FakePage from '@/components/fakePage';
 import MainBanner from '@/components/mainBanner';
 import { 
     Image, 
@@ -11,9 +12,10 @@ import {
 export default function HomeScreen() {
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView style={styles.scrollView}>
+      {/* <ScrollView style={styles.scrollView}>
         <MainBanner />
-      </ScrollView>
+      </ScrollView> */}
+      <FakePage />
     </SafeAreaView>
   );
 }
@@ -22,6 +24,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         paddingTop: StatusBar.currentHeight,
+         backgroundColor:'white'
       },
       scrollView: {
         marginHorizontal: 10,
